@@ -1,4 +1,3 @@
-<!-- Connect form  -->
 <?php
 define('HOST','pumipat.trueddns.com');
 define('USER','root');

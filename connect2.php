@@ -1,4 +1,3 @@
-<!-- LAN -->
 <?php
 define('HOST','192.168.1.46');
 define('USER','root');
