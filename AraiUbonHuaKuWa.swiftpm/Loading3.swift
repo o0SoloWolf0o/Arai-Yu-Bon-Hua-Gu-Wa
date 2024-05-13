@@ -36,7 +36,7 @@ struct Loading3: View {
                 }
             
             NavigationLink(
-                destination: PlayingScreen2(category:category,totalPlayers:totalPlayers,timeplayer1min:timeplayer1min,timeplayer1sec:timeplayer1sec,timeplayer2min:timeplayer2min,timeplayer2sec:timeplayer2sec),
+                destination: PlayingScreen3(category:category,totalPlayers:totalPlayers,timeplayer1min:timeplayer1min,timeplayer1sec:timeplayer1sec,timeplayer2min:timeplayer2min,timeplayer2sec:timeplayer2sec),
                 isActive: $isActive,
                 label: {
                     EmptyView()
