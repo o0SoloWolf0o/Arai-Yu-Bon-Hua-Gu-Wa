@@ -90,7 +90,7 @@ struct PlayingScreen4: View {
                             }) {
                                 NavigationStack{
                                     NavigationLink(destination: Main()){
-                                        Text("Close")
+                                        Text("Back to Main Menu")
                                             .font(.headline)
                                             .foregroundColor(.white)
                                             .padding()

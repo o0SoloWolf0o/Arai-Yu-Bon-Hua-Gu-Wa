@@ -76,7 +76,7 @@ struct PlayingScreen2: View {
                             
                             if totalPlayers != 2 {
                                 NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: minutesElapsed, timeplayer2sec: secondsElapsed)) {
-                                    Text("Close")
+                                    Text("Player 3 Turn")
                                         .font(.headline)
                                         .foregroundColor(.white)
                                         .padding()
