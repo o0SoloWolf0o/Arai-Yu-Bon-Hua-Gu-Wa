@@ -4,10 +4,10 @@ struct PlayingScreen2: View {
     var category: String
     @State private var randomImageName: String = ""
 
+    var totalPlayers : Int
+    
     var timeplayer1min: Int
     var timeplayer1sec: Int
-    
-    var totalPlayers : Int
 
     @State private var totalSecondsElapsed = 0
     @State private var minutesElapsed = 0
