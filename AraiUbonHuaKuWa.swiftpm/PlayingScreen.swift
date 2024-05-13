@@ -131,9 +131,9 @@ struct PlayingScreen: View {
         case "6":
             imageNamePrefix = "06-"
             maxImageIndex = 20
-        default:
+        case "7":
             imageNamePrefix = ""
-            maxImageIndex = 0
+            maxImageIndex = 70
         }
         
         // Generate a random image index within the range
