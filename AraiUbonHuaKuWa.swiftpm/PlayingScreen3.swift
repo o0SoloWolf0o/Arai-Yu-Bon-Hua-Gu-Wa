@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PlayingScreen2: View {
+struct PlayingScreen3: View {
     var category: String
     @State private var randomImageName: String = ""
 
