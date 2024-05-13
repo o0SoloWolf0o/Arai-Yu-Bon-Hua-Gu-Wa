@@ -63,8 +63,9 @@ struct PlayingScreen: View {
                                 .font(.title)
                                 .foregroundColor(.black)
                                 .padding()
+                                .bold()
                             // Additional pop-up content can go here
-                            Text("Player 1 time :\(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
+                            Text("Player 1 time : \(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
                                 .font(.title)
                                 .foregroundColor(.black)
                                 .padding()
@@ -79,9 +80,12 @@ struct PlayingScreen: View {
                                         .background(Color.blue)
                                         .cornerRadius(10)
                                 }    
-                                }
+                            }
                         }
-                            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9) // Adjust size as needed
+                            .frame(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.height * 0.5) 
+                            .background(Color.white)
+                            .cornerRadius(20)
+                            .shadow(radius:20)
                     )
             }
         }
