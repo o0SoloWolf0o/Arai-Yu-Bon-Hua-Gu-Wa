@@ -2,6 +2,9 @@ import SwiftUI
 
 struct Loading3: View {
     var category: String
+    
+    var totalPlayers: Int
+
     var timeplayer1min: Int
     var timeplayer1sec: Int
 

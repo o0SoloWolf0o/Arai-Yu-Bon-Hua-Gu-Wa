@@ -4,13 +4,13 @@ struct PlayingScreen3: View {
     var category: String
     @State private var randomImageName: String = ""
 
+    var totalPlayers : Int
+
     var timeplayer1min: Int
     var timeplayer1sec: Int
 
     var timeplayer2min: Int
     var timeplayer2sec: Int
-    
-    var totalPlayers : Int
 
     @State private var totalSecondsElapsed = 0
     @State private var minutesElapsed = 0
@@ -85,7 +85,7 @@ struct PlayingScreen3: View {
                             Button(action: {
                                 self.isShowingCorrectPopup = false
                             }) {
-                                NavigationLink(destination: Loading3(category: category, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, totalPlayers: totalPlayers, timeplayer2min: timeplayer2min, timeplayer2sec: timeplayer2sec, timeplayer3min: minutesElapsed, timeplayer3sec: secondsElapsed)) {
+                                NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: timeplayer2min, timeplayer2sec: timeplayer2sec, timeplayer3min: minutesElapsed, timeplayer3sec: secondsElapsed)) {
                                     Text("Close")
                                         .font(.headline)
                                         .foregroundColor(.white)
