@@ -100,7 +100,7 @@ struct PlayingScreen4: View {
                                 }
                                 }
                         }
-                            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
+                            .frame(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.height * 0.5)
                             .background(Color.white)
                             .cornerRadius(20)
                             .shadow(radius:20)
