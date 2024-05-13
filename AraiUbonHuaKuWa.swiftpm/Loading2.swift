@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct Loading2: View {
-    var category: String
-    var totalPlayers: Int
-    var timeplayer1min: Int
-    var timeplayer1sec: Int
+    var category:String
+    var totalPlayers:Int
+    var timeplayer1min:Int
+    var timeplayer1sec:Int
     
     @State private var text = "หันจอไปหาเพื่อน"
     @State private var isActive = false
