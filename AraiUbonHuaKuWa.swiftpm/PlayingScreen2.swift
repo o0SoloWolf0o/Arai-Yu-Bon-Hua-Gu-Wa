@@ -90,6 +90,7 @@ struct PlayingScreen2: View {
                                 Button(action: {
                                     self.isShowingCorrectPopup = false
                                 }) {
+                                NavigationStack{
                                     NavigationLink(destination: Main()){
                                         Text("Close")
                                             .font(.headline)
@@ -97,7 +98,8 @@ struct PlayingScreen2: View {
                                             .padding()
                                             .background(Color.blue)
                                             .cornerRadius(10)
-                                    }
+                                        }
+                                }
                                 }
                             }
                         }
