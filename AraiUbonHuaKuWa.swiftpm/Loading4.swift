@@ -10,7 +10,7 @@ struct Loading4: View {
     var timeplayer3min:Int
     var timeplayer3sec:Int
     
-    @State private var text = "หันจอไปหาเพื่อน"
+    @State private var imageToShow = "หันจอ"
     @State private var isActive = false
     
     var body: some View {

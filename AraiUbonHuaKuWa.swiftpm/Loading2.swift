@@ -6,7 +6,7 @@ struct Loading2: View {
     var timeplayer1min:Int
     var timeplayer1sec:Int
     
-    @State private var text = "หันจอไปหาเพื่อน"
+    @State private var imageToShow = "หันจอ"
     @State private var isActive = false
     
     var body: some View {

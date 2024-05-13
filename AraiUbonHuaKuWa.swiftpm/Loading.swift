@@ -3,7 +3,7 @@ import SwiftUI
 struct Loading: View {
     var category: String
     
-    @State private var text = "หันจอไปหาเพื่อน"
+    @State private var imageToShow = "หันจอ"
     @State private var isActive = false
 
     var totalPlayers: Int
