@@ -134,7 +134,7 @@ struct PlayingScreen: View {
         case "7":
             let randomPrefixIndex = Int.random(in: 1...6)
             imageNamePrefix = String(format: "%02d-", randomPrefixIndex)
-            maxImageIndex = 70
+            maxImageIndex = 10
         default:
             imageNamePrefix = ""
             maxImageIndex = 0
