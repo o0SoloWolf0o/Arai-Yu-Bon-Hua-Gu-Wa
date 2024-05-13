@@ -19,6 +19,7 @@ struct PlayingScreen: View {
                         Image(randomImageName)
                             .resizable()
                             .frame(width: 500, height: 500)
+                            .padding(.trailing, 30)
                             .onTapGesture {
                                 self.randomImageName = self.randomImageName(for: self.category)
                             }
@@ -26,30 +27,25 @@ struct PlayingScreen: View {
                     VStack{
                         Text(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))
                             .font(.system(size: 120))
-                        HStack{
+                            .frame(width: 400, height: 120)
+                        VStack{
                             Button(action: {
                                 self.addOneMinute()
                             }) {
-                                Text("Incorrect")
-                                    .font(.system(size: 23))
-                                    .fontWeight(.bold)
-                                    .frame(width: 150, height: 50)
-                                    .background(Color.red)
-                                    .foregroundColor(.white)
+                                Image("Incorrect")
+                                    .resizable()
+                                    .frame(width:250, height: 120)
                             }
                             
                             Button(action: {
                                 self.stopTimer()
                                 self.isShowingCorrectPopup = true
                             }) {
-                                Text("Correct")
-                                    .font(.system(size: 23))
-                                    .fontWeight(.bold)
-                                    .frame(width: 150, height: 50)
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
+                                Image("Correct")
+                                    .resizable()
+                                    .frame(width:250, height: 120)
                             }
-                        }
+                        }.padding(.top, 20)
                     }
                 }
                 .onAppear {
@@ -59,18 +55,18 @@ struct PlayingScreen: View {
             
             // Pop-up content
             if isShowingCorrectPopup {
-                Color.black.opacity(1) // Semi-transparent background
+                Color.white.opacity(0.5) // Semi-transparent background
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
                             Text("Correct! You're doing great!")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .padding()
                             // Additional pop-up content can go here
                             Text("Player 1 time :\(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .padding()
                             Button(action: {
                                 self.isShowingCorrectPopup = false

@@ -21,7 +21,7 @@ struct Loading4: View {
                 .onAppear {
                     // Change the image after 3 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        self.imageToShow = "Loading1"
+                        self.imageToShow = "Loading3"
                     }
                     // Change the image after 4 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
@@ -29,7 +29,7 @@ struct Loading4: View {
                     }
                     // Change the image after 5 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                        self.imageToShow = "Loading3"
+                        self.imageToShow = "Loading1"
                     }
                     // Navigate to the PlayingScreen after 6 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 6) {

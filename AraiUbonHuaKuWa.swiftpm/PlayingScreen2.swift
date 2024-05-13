@@ -28,30 +28,25 @@ struct PlayingScreen2: View {
                     VStack{
                         Text(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))
                             .font(.system(size: 120))
-                        HStack{
+                            .frame(width: 400, height: 120)
+                        VStack{
                             Button(action: {
                                 self.addOneMinute()
                             }) {
-                                Text("Incorrect")
-                                    .font(.system(size: 23))
-                                    .fontWeight(.bold)
-                                    .frame(width: 150, height: 50)
-                                    .background(Color.red)
-                                    .foregroundColor(.white)
+                                Image("Incorrect")
+                                    .resizable()
+                                    .frame(width:250, height: 120)
                             }
                             
                             Button(action: {
                                 self.stopTimer()
                                 self.isShowingCorrectPopup = true
                             }) {
-                                Text("Correct")
-                                    .font(.system(size: 23))
-                                    .fontWeight(.bold)
-                                    .frame(width: 150, height: 50)
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
+                                Image("Correct")
+                                    .resizable()
+                                    .frame(width:250, height: 120)
                             }
-                        }
+                        }.padding(.top, 20)
                     }
                 }
                 .onAppear {
