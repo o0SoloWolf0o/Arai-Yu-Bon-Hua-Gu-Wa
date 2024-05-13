@@ -11,23 +11,23 @@ struct Loading2: View {
     
     var body: some View {
         VStack {
-            Text(text)
-                .bold()
-                .font(.system(size:120))
+            Image(imageToShow)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .onAppear {
-                    // Change the text after 3 seconds
+                    // Change the image after 3 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        self.text = "3"
+                        self.imageToShow = "Loading1"
                     }
-                    // Change the text after 4 seconds
+                    // Change the image after 4 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                        self.text = "2"
+                        self.imageToShow = "Loading2"
                     }
-                    // Change the text after 5 seconds
+                    // Change the image after 5 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                        self.text = "1"
+                        self.imageToShow = "Loading3"
                     }
-                    // Navigate to the playingscreen after 6 seconds
+                    // Navigate to the PlayingScreen after 6 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                         self.isActive = true
                     }

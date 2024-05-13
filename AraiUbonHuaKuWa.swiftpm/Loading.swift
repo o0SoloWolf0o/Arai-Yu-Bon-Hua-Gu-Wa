@@ -1,8 +1,12 @@
 import SwiftUI
 
 struct Loading: View {
-    @State private var imageToShow = "หันจอ"
+    var category: String
+    
+    @State private var text = "หันจอไปหาเพื่อน"
     @State private var isActive = false
+
+    var totalPlayers: Int
     
     var body: some View {
         VStack {
@@ -29,7 +33,7 @@ struct Loading: View {
                 }
             
             NavigationLink(
-                destination: PlayingScreen(),
+                destination: PlayingScreen(category:category,totalPlayers:totalPlayers),
                 isActive: $isActive,
                 label: {
                     EmptyView()
