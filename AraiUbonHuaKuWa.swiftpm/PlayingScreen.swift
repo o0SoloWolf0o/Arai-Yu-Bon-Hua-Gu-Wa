@@ -1,16 +1,16 @@
 import SwiftUI
 
 struct PlayingScreen: View {
+    var category: String
+    @State private var randomImageName: String = ""
+
+    var totalPlayers : Int
+
     @State private var totalSecondsElapsed = 0
     @State private var minutesElapsed = 0
     @State private var secondsElapsed = 0
     @State private var timer: Timer? = nil
     @State private var isShowingCorrectPopup = false
-    
-    var category: String
-    @State private var randomImageName: String = ""
-    
-    var totalPlayers : Int
     
     var body: some View {
         ZStack {
