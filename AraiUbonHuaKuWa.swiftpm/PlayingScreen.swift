@@ -132,11 +132,12 @@ struct PlayingScreen: View {
             imageNamePrefix = "06-"
             maxImageIndex = 20
         case "7":
-            imageNamePrefix = "01-"
+            let randomPrefixIndex = Int.random(in: 1...6)
+            imageNamePrefix = String(format: "%02d-", randomPrefixIndex)
             maxImageIndex = 70
         default:
             imageNamePrefix = ""
-            maxImageIndex = 70
+            maxImageIndex = 0
         }
         
         // Generate a random image index within the range
