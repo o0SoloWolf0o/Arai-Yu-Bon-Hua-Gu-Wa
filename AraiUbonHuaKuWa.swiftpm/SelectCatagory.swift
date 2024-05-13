@@ -2,82 +2,78 @@ import SwiftUI
 
 struct SelectCategory: View {
     @State private var SelectedCategory: String = ""
-    var totalPlayers : Int
     var body: some View {
-        NavigationStack{
-            VStack{
+        VStack{
+            HStack{
+                Image("Select category")
+                    .resizable() 
+                    .frame(width:700, height: 180)
+            }.padding(.bottom, 30)
+            ScrollView{
                 HStack{
-                    Image("Logo")
-                        .resizable()
-                        .frame(width:150, height: 150)
-                    Text("Select Category")
-                        .navigationBarHidden(true)
-                        .font(.system(size:50))
+                    VStack{
+                        Image("Random-category")
+                            .resizable()
+                            .frame(width:480, height: 150)
+                        Text("สุ่ม (แนะนำ)")
+                            .navigationBarHidden(true)
+                            .font(.system(size:50))
+                    }
                 }
-                ScrollView{
-                    HStack{
+                HStack{
+                    NavigationLink(destination: Loading()){
                         VStack{
-                            Image("Logo")
+                            Image("Cartoon-category")
                                 .resizable()
-                                .frame(width:150, height: 250)
-                            NavigationLink(destination:Loading(category: "1",totalPlayers:totalPlayers)){
-                                Text("การ์ตูน")
-                                    .navigationBarHidden(true)
-                                    .font(.system(size:50))
-                            }
-                        }
-                        VStack{
-                            Image("Logo")
-                                .resizable()
-                                .frame(width:150, height: 250)
-                            NavigationLink(destination:Loading(category: "2",totalPlayers:totalPlayers)){
-                                Text("อาหาร")
-                                    .navigationBarHidden(true)
-                                    .font(.system(size:50))
-                            }
-                        }
-                        VStack{
-                            Image("Logo")
-                                .resizable()
-                                .frame(width:150, height: 250)
-                            NavigationLink(destination:Loading(category: "3",totalPlayers:totalPlayers)){
-                                Text("สถานที่")
-                                    .navigationBarHidden(true)
-                                    .font(.system(size:50))
-                            }
+                                .frame(width:300, height: 150)
+                            Text("การ์ตูน")
+                                .navigationBarHidden(true)
+                                .font(.system(size:50))
                         }
                     }
-                    HStack{
-                        VStack{
-                            Image("Logo")
-                                .resizable()
-                                .frame(width:150, height: 250)
-                            NavigationLink(destination:Loading(category: "4",totalPlayers:totalPlayers)){
-                                Text("คนดัง")
-                                    .navigationBarHidden(true)
-                                    .font(.system(size:50))
-                            }
-                        }
-                        VStack{
-                            Image("Logo")
-                                .resizable()
-                                .frame(width:150, height: 250)
-                            NavigationLink(destination:Loading(category: "5",totalPlayers:totalPlayers)){
-                                Text("เพลง&ศิลปิน")
-                                    .navigationBarHidden(true)
-                                    .font(.system(size:50))
-                            }
-                        }
-                        VStack{
-                            Image("Logo")
-                                .resizable()
-                                .frame(width:150, height: 250)
-                            NavigationLink(destination:Loading(category: "6",totalPlayers:totalPlayers)){
-                                Text("สิ่งของ")
-                                    .navigationBarHidden(true)
-                                    .font(.system(size:50))
-                            }
-                        }
+                    VStack{
+                        Image("Food-category")
+                            .resizable()
+                            .frame(width:300, height: 150)
+                        Text("อาหาร")
+                            .navigationBarHidden(true)
+                            .font(.system(size:50))
+                        
+                    }
+                    VStack{
+                        Image("Place-category")
+                            .resizable()
+                            .frame(width:300, height: 150)
+                        Text("สถานที่")
+                            .navigationBarHidden(true)
+                            .font(.system(size:50))
+                    }
+                }.padding(.bottom, 60)
+                HStack{
+                    VStack{
+                        Image("Celeb-category")
+                            .resizable()
+                            .frame(width:300, height: 150)
+                        Text("คนดัง")
+                            .navigationBarHidden(true)
+                            .font(.system(size:50))
+                    }
+                    VStack{
+                        Image("Music-category")
+                            .resizable()
+                            .frame(width:300, height: 150)
+                        Text("เพลง&ศิลปิน")
+                            .navigationBarHidden(true)
+                            .font(.system(size:50))
+                        
+                    }
+                    VStack{
+                        Image("Thing-category")
+                            .resizable()
+                            .frame(width:300, height: 150)
+                        Text("สิ่งของ")
+                            .navigationBarHidden(true)
+                            .font(.system(size:50))
                     }
                 }
             }
