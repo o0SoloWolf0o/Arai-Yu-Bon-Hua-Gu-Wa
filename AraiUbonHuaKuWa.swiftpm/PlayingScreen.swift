@@ -67,7 +67,7 @@ struct PlayingScreen: View {
                             // Additional pop-up content can go here
                             Text("Player 1 time : \(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
                                 .font(.title)
-                                .foregroundColor(.black)
+                                .foregroundColor(.blue)
                                 .padding()
                             Button(action: {
                                 self.isShowingCorrectPopup = false

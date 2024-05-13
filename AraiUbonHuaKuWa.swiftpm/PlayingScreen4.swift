@@ -59,29 +59,30 @@ struct PlayingScreen4: View {
             }
 
             if isShowingCorrectPopup {
-                Color.black.opacity(1)
+                Color.white.opacity(0.5)
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
                             Text("Correct! You're doing great!")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .padding()
+                                .bold()
                             Text("Player 1 time : \(String(format: "%02d:%02d", timeplayer1min, timeplayer1sec))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.blue)
                                 .padding()
                             Text("Player 2 time : \(String(format: "%02d:%02d", timeplayer2min, timeplayer2sec))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.purple)
                                 .padding()
                             Text("Player 3 time : \(String(format: "%02d:%02d", timeplayer3min, timeplayer3sec))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.orange)
                                 .padding()
                             Text("Player 4 time : \(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.pink)
                                 .padding()
                             
                             Button(action: {
@@ -100,6 +101,9 @@ struct PlayingScreen4: View {
                                 }
                         }
                             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
+                            .background(Color.white)
+                            .cornerRadius(20)
+                            .shadow(radius:20)
                     )
             }
         }

@@ -21,6 +21,7 @@ struct PlayingScreen2: View {
                         Image(randomImageName)
                             .resizable()
                             .frame(width: 500, height: 500)
+                            .padding(.trailing, 30)
                             .onTapGesture {
                                 self.randomImageName = self.randomImageName(for: self.category)
                             }
@@ -55,21 +56,22 @@ struct PlayingScreen2: View {
             }
             
             if isShowingCorrectPopup {
-                Color.black.opacity(1)
+                Color.white.opacity(0.5)
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
                             Text("Correct! You're doing great!")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 .padding()
+                                .bold()
                             Text("Player 1 time: \(String(format: "%02d:%02d", timeplayer1min, timeplayer1sec))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.blue)
                                 .padding()
                             Text("Player 2 time: \(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(.purple)
                                 .padding()
                             
                             if totalPlayers != 2 {
@@ -99,6 +101,9 @@ struct PlayingScreen2: View {
                             }
                         }
                             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
+                            .background(Color.white)
+                            .cornerRadius(20)
+                            .shadow(radius:20)
                     )
             }
         }
