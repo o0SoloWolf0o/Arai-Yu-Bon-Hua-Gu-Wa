@@ -14,8 +14,6 @@ struct Loading3: View {
     @State private var text = "หันจอไปหาเพื่อน"
     @State private var isActive = false
     
-    var totalPlayers: Int
-    
     var body: some View {
         VStack {
             Text(text)
