@@ -73,7 +73,7 @@ struct PlayingScreen: View {
                             Button(action: {
                                 self.isShowingCorrectPopup = false
                             }) {
-                                NavigationLink(destination: Loading2(timeplayer1min:minutesElapsed, timeplayer1sec:secondsElapsed)){
+                                NavigationLink(destination: Loading2(timeplayer1min:minutesElapsed, timeplayer1sec:secondsElapsed, category: category, totalPlayers: totalPlayers)){
                                     Text("Close")
                                         .font(.headline)
                                         .foregroundColor(.white)
