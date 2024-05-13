@@ -2,13 +2,11 @@ import SwiftUI
 
 struct PlayingScreen2: View {
     var category: String
-    @State private var randomImageName: String = ""
-
     var totalPlayers : Int
-    
     var timeplayer1min: Int
     var timeplayer1sec: Int
 
+    @State private var randomImageName: String = ""
     @State private var totalSecondsElapsed = 0
     @State private var minutesElapsed = 0
     @State private var secondsElapsed = 0
@@ -78,7 +76,7 @@ struct PlayingScreen2: View {
                             Button(action: {
                                 self.isShowingCorrectPopup = false
                             }) {
-                                NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: minutesElapsed, timeplayer2sec: secondsElapsed)) {
+                                NavigationLink(destination: Loading3(category:category,totalPlayers:totalPlayers,timeplayer1min:timeplayer1min,timeplayer1sec:timeplayer1sec,timeplayer2min:minutesElapsed,timeplayer2sec:secondsElapsed)) {
                                     Text("Close")
                                         .font(.headline)
                                         .foregroundColor(.white)

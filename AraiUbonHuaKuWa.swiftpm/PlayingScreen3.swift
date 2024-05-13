@@ -2,16 +2,13 @@ import SwiftUI
 
 struct PlayingScreen3: View {
     var category: String
-    @State private var randomImageName: String = ""
-
     var totalPlayers : Int
-
     var timeplayer1min: Int
     var timeplayer1sec: Int
-
     var timeplayer2min: Int
     var timeplayer2sec: Int
 
+    @State private var randomImageName: String = ""
     @State private var totalSecondsElapsed = 0
     @State private var minutesElapsed = 0
     @State private var secondsElapsed = 0
