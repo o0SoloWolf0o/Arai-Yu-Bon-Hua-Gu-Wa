@@ -84,7 +84,7 @@ struct PlayingScreen3: View {
                                 .padding()
                             
                             if totalPlayers != 3 {
-                                NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: minutesElapsed, timeplayer2sec: secondsElapsed)) {
+                                NavigationLink(destination: Loading4(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min:timeplayer2min, timeplayer2sec: timeplayer2sec, timeplayer3min: minutesElapsed, timeplayer3sec: secondsElapsed)) {
                                     Text("Close")
                                         .font(.headline)
                                         .foregroundColor(.white)

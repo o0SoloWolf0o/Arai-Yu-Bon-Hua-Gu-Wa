@@ -88,24 +88,7 @@ struct PlayingScreen4: View {
                                 .font(.title)
                                 .foregroundColor(.white)
                                 .padding()
-
-                            if totalPlayers == 4 {
-                                Button(action: {
-                                    self.isShowingCorrectPopup = false
-                                }) {
-                                    NavigationStack{
-                                        NavigationLink(destination: Main()){
-                                            Text("Close")
-                                                .font(.headline)
-                                                .foregroundColor(.white)
-                                                .padding()
-                                                .background(Color.blue)
-                                                .cornerRadius(10)
-                                        }
-                                    }
-                                }
-                            }
-
+                            
                             Button(action: {
                                 self.isShowingCorrectPopup = false
                             }) {
