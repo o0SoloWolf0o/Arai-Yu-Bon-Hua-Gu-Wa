@@ -16,13 +16,13 @@ struct PlayingScreen: View {
             VStack {
                 HStack{
                     VStack {
-    Image(randomImageName)
-        .resizable()
-        .frame(width: 500, height: 500)
-        .onTapGesture {
-            self.randomImageName = self.randomImageName(for: self.category.rawValue)
-        }
-}
+                        Image(randomImageName)
+                            .resizable()
+                            .frame(width: 500, height: 500)
+                            .onTapGesture {
+                                self.randomImageName = self.randomImageName(for: self.category)
+                            }
+                    }
                     VStack{
                         Text(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))
                             .font(.system(size: 120))
