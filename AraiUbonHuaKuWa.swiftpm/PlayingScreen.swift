@@ -132,6 +132,9 @@ struct PlayingScreen: View {
             imageNamePrefix = "06-"
             maxImageIndex = 20
         case "7":
+            imageNamePrefix = "01-"
+            maxImageIndex = 70
+        default:
             imageNamePrefix = ""
             maxImageIndex = 70
         }
