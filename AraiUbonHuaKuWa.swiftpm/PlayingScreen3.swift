@@ -82,20 +82,30 @@ struct PlayingScreen3: View {
                                 .font(.title)
                                 .foregroundColor(.white)
                                 .padding()
-                            Button(action: {
-                                self.isShowingCorrectPopup = false
-                            }) {
-                                NavigationLink(destination: Loading4(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: timeplayer2min, timeplayer2sec: timeplayer2sec, timeplayer3min: minutesElapsed, timeplayer3sec: secondsElapsed)) {
-                                    Text("Close")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .background(Color.blue)
-                                        .cornerRadius(10)
-                                }    
-                                }
-                        }
-                            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
+                                
+                                if totalPlayers != 3 {
+        NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: minutesElapsed, timeplayer2sec: secondsElapsed)) {
+            Text("Close")
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(10)
+        }
+    } else {
+        Button(action: {
+            self.isShowingCorrectPopup = false
+        }) {
+            Text("Close")
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(10)
+        }
+    }
+}
+.frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
                     )
             }
         }
