@@ -1,5 +1,4 @@
 import SwiftUI
-//import PlaygroundSupport
 
 struct Loading: View {
     var category: String
