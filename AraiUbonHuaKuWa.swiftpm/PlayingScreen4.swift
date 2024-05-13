@@ -91,12 +91,14 @@ struct PlayingScreen4: View {
                             Button(action: {
                                 self.isShowingCorrectPopup = false
                             }) {
-                                Text("Close")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
+                                NavigationLink(destination: Main()){
+                                    Text("Close")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                    }
                                 }
                         }
                             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
