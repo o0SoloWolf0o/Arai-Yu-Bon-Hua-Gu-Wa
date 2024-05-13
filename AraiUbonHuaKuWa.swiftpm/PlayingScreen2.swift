@@ -58,48 +58,48 @@ struct PlayingScreen2: View {
                     self.startTimer()
                     self.randomImageName = self.randomImageName(for: self.category)                }
             }
-
+            
             if isShowingCorrectPopup {
                 Color.black.opacity(1)
                     .edgesIgnoringSafeArea(.all)
                     .overlay(
                         VStack {
-    Text("Correct! You're doing great!")
-        .font(.title)
-        .foregroundColor(.white)
-        .padding()
-    Text("Player 1 time: \(String(format: "%02d:%02d", timeplayer1min, timeplayer1sec))")
-        .font(.title)
-        .foregroundColor(.white)
-        .padding()
-    Text("Player 2 time: \(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
-        .font(.title)
-        .foregroundColor(.white)
-        .padding()
-    
-    if totalPlayers != 2 {
-        NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: minutesElapsed, timeplayer2sec: secondsElapsed)) {
-            Text("Close")
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(10)
-        }
-    } else {
-        Button(action: {
-            self.isShowingCorrectPopup = false
-        }) {
-            Text("Close")
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(10)
-        }
-    }
-}
-.frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
+                            Text("Correct! You're doing great!")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .padding()
+                            Text("Player 1 time: \(String(format: "%02d:%02d", timeplayer1min, timeplayer1sec))")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .padding()
+                            Text("Player 2 time: \(String(format: "%02d:%02d", minutesElapsed, secondsElapsed))")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .padding()
+                            
+                            if totalPlayers != 2 {
+                                NavigationLink(destination: Loading3(category: category, totalPlayers: totalPlayers, timeplayer1min: timeplayer1min, timeplayer1sec: timeplayer1sec, timeplayer2min: minutesElapsed, timeplayer2sec: secondsElapsed)) {
+                                    Text("Close")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                }
+                            } else {
+                                Button(action: {
+                                    self.isShowingCorrectPopup = false
+                                }) {
+                                    Text("Close")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                }
+                            }
+                        }
+                            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
                     )
             }
         }
